@@ -7,8 +7,11 @@ public class ScoreManager : MonoBehaviour
 {
     public static ScoreManager instance;
 
+
+   
     public Text sooretext;
     public Text highScoreText;
+    public Text infoText;
 
     private void Awake()
     {
@@ -17,6 +20,7 @@ public class ScoreManager : MonoBehaviour
 
     int score = 0;
     int highScore = 0;
+   
     // Start is called before the first frame update
     void Start()
     {
@@ -24,6 +28,7 @@ public class ScoreManager : MonoBehaviour
 
         sooretext.text = " SCORE: " + score.ToString();
         highScoreText.text = " HIGHSCORE:  " + highScore.ToString();
+        infoText.text= "kill All the enemies and Glowing object to Win the Game";
 
     }
 
@@ -34,5 +39,10 @@ public class ScoreManager : MonoBehaviour
 
         if(highScore<score)
         PlayerPrefs.SetInt("highScore", score);
+    }
+
+    private void Update()
+    {
+        Destroy(infoText, 2f);
     }
 }

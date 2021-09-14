@@ -25,7 +25,7 @@ public class LevelManager : MonoBehaviour
     }
     public void Quit()
     {
-        Application.Quit();
+        SceneManager.LoadScene(6);
     }
 
    // [System.Obsolete]

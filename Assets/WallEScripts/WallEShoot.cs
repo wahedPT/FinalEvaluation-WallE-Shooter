@@ -7,8 +7,7 @@ public class WallEShoot : MonoBehaviour
 
     public int damage = 10;
     public float range = 100f;
-    public float impactForce = 30f;
-    public float firerate = 20f;
+    public float firerate = 1f;
     public Transform firePoint;
 
 
@@ -31,28 +30,20 @@ public class WallEShoot : MonoBehaviour
 
         audi = GetComponent<AudioSource>();
         if (currentAmmo == -1)
-            currentAmmo = maxAmmo;
-        
+            currentAmmo = maxAmmo;       
     }
-
     // Update is called once per frame
     void Update()
-    {
-       
-       
+    {     
         if (isReloading)
             return;
-
-
 
         if (currentAmmo <= 0)
         {
             if (Input.GetKeyDown(KeyCode.R))
      
                 StartCoroutine(Reload());
-                return;
-            
-          
+                return;        
         }
 
 
@@ -79,9 +70,6 @@ public class WallEShoot : MonoBehaviour
 
           
         }
-       
-
-
         //enemy damage
         RaycastHit hit;
 
@@ -98,31 +86,17 @@ public class WallEShoot : MonoBehaviour
             if (win != null)
             {
                 win.Damage(10);
-
-
-            }
-
-            //if (hit.rigidbody != null)
-            //{
-            //    hit.rigidbody.AddForce(-hit.normal * impactForce);
-            //}
+            }        
             GameObject ImpactGo = Instantiate(impackteffect, hit.point, Quaternion.LookRotation(hit.normal));
          
             Destroy(ImpactGo, 1f);
-
-
         }
-
-
-
-        if (currentAmmo <= 0)
-        {
+       if (currentAmmo <= 0)
+       {
            Reload();
             return;
            
-        }
-
-
+       }
     }
     IEnumerator Reload()
     {
@@ -139,7 +113,5 @@ public class WallEShoot : MonoBehaviour
         isReloading = false;
 
 
-    }
-
-   
+    }  
 }

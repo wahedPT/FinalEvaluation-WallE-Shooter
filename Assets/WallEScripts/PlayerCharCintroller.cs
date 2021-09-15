@@ -42,4 +42,6 @@ public class PlayerCharCintroller : MonoBehaviour
         controller.Move(velocity * Time.deltaTime);
     }
 
+    
+
 }

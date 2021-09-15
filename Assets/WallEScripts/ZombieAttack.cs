@@ -35,12 +35,14 @@ public class ZombieAttack : MonoBehaviour
         {
             navMeshAgent.SetDestination(target.position);
             float currenspeed = navMeshAgent.velocity.magnitude;
-            anim.SetFloat("Speed", currenspeed);
+            anim.SetFloat("Speed", navMeshAgent.velocity.magnitude);
+
+          
         }
 
         Distance = Vector3.Distance(player.transform.position, this.transform.position);
         
-
+       
     }
 
 
@@ -52,7 +54,16 @@ public class ZombieAttack : MonoBehaviour
             if (playerHealth != null)
             {
                 playerHealth.Damage(5);
-                anim.SetTrigger("Attack");
+              
+               
+            }
+        }
+        if (other.gameObject.tag == "Player")
+        {
+            if (Distance < 3)
+            {
+                anim.SetFloat("Speed", -1);
+                Debug.Log("Attack");
             }
         }
     }

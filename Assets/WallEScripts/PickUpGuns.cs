@@ -24,14 +24,14 @@ public class PickUpGuns : MonoBehaviour
         if (!equipped)
         {
             gunScript.enabled = false;
-            rb.isKinematic = false;
+          //  rb.isKinematic = false;
             col.isTrigger = false;
 
         }
         if (equipped)
         {
             gunScript.enabled = true;
-            rb.isKinematic = true;
+          //  rb.isKinematic = true;
             col.isTrigger = true;
             slotFull = true;
 
@@ -58,7 +58,7 @@ public class PickUpGuns : MonoBehaviour
         transform.localScale = Vector3.one;
 
 
-        rb.isKinematic = true;
+     //   rb.isKinematic = true;
         col.isTrigger = true;
 
         gunScript.enabled = true;

@@ -69,7 +69,7 @@ public class WallEShoot : MonoBehaviour
         }
         //enemy damage
         RaycastHit hit;
-
+        Debug.DrawRay(firePoint.transform.position, firePoint.transform.forward * 100, Color.red);
         if (Physics.Raycast(fpsCam.transform.position, fpsCam.transform.forward, out hit, range))
         {
 

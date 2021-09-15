@@ -478,7 +478,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 512308d7f11ddf845a4a2b8df120635c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gunScript: {fileID: 729151060}
+  gunScript: {fileID: 0}
   rb: {fileID: 18302329}
   col: {fileID: 18302328}
   player: {fileID: 729151053}
@@ -5635,7 +5635,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 30, y: 30}
+  m_SizeDelta: {x: 64, y: 64}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &598736391
 MonoBehaviour:
@@ -5657,7 +5657,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 394e93ce356b57344903a08ff72fcab2, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 194a493ac4f99db4ca723aefdca46f1f, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -6571,9 +6571,9 @@ GameObject:
   - component: {fileID: 729151059}
   - component: {fileID: 729151058}
   - component: {fileID: 729151057}
-  - component: {fileID: 729151060}
   - component: {fileID: 729151061}
   - component: {fileID: 729151062}
+  - component: {fileID: 729151060}
   m_Layer: 12
   m_Name: WallE
   m_TagString: Player
@@ -6821,15 +6821,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damage: 10
   range: 100
-  impactForce: 30
-  firerate: 15
   firePoint: {fileID: 959866595}
   maxAmmo: 30
   currentAmmo: 0
-  reloadTime: 0.3
+  reloadTime: 0.2
   audi: {fileID: 729151062}
   fpsCam: {fileID: 1538028931}
-  impackteffect: {fileID: 1000013462590818, guid: ecdd96beb7f93494880c052dfccf9dc1,
+  impackteffect: {fileID: 1000013177420064, guid: 95c9572b9dfb45a439e921fba994e8e0,
     type: 3}
 --- !u!114 &729151061
 MonoBehaviour:
@@ -7877,7 +7875,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f43978e3003770a459452660d9361414, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 100
+  health: 15
 --- !u!114 &800340564
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12238,7 +12236,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f43978e3003770a459452660d9361414, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 100
+  health: 15
 --- !u!114 &1214442261
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13962,7 +13960,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f43978e3003770a459452660d9361414, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 100
+  health: 20
 --- !u!1001 &1341415135
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15658,7 +15656,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f43978e3003770a459452660d9361414, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 100
+  health: 20
 --- !u!1001 &1523334190
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -19668,7 +19666,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f43978e3003770a459452660d9361414, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 100
+  health: 20
 --- !u!4 &1893473460 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4000013950294986, guid: 2ebdc32c603c0f74a8df3ff23c55e8e0,

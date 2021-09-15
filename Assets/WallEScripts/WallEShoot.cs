@@ -7,7 +7,6 @@ public class WallEShoot : MonoBehaviour
 
     public int damage = 10;
     public float range = 100f;
-    public float firerate = 1f;
     public Transform firePoint;
 
 
@@ -15,15 +14,13 @@ public class WallEShoot : MonoBehaviour
     public int currentAmmo;
     public float reloadTime = 0.2f;
     private bool isReloading = false;
-    //public Animator animator;
-
+  
     public AudioSource audi;
 
 
     public Transform fpsCam;
     public GameObject impackteffect;
 
-    private float nexttimeToFire = 5f;
    
     void Start()
     {
@@ -47,9 +44,9 @@ public class WallEShoot : MonoBehaviour
         }
 
 
-        if (Input.GetMouseButton(0) && Time.time >= nexttimeToFire)
+        if (Input.GetMouseButtonDown(0))
         {
-           nexttimeToFire = Time.time + 0.25f / firerate;
+        
             audi.Play();
             Shoot();
         }
@@ -85,7 +82,7 @@ public class WallEShoot : MonoBehaviour
             }
             if (win != null)
             {
-                win.Damage(10);
+                win.Damage(5);
             }        
             GameObject ImpactGo = Instantiate(impackteffect, hit.point, Quaternion.LookRotation(hit.normal));
          
